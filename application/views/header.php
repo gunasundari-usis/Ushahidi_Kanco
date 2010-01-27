@@ -44,6 +44,9 @@
 	if ($map_enabled)
 	{
 		echo $api_url . "\n";
+		if ($main_page || $this_page == 'alerts') {
+			echo html::script('media/js/selectToUISlider.jQuery', true);
+		}
 		if ($main_page) {
 			echo html::script('media/js/selectToUISlider.jQuery', true);
 			echo html::script('media/js/jquery.flot', true);
